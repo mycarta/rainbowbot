@@ -17,10 +17,10 @@ This is my envisioned workflow:
 7. check for monotonicity of L as a perceptual test
 8. Optional functionality: convert it to a perceptual version
 
-See my notebook Evaluate and compare colormaps for a background on perceptual colormaps, and  https://github.com/seg/tutorials/blob/master/1408_Evaluate_and_compare_colormaps/How_to_evaluate_and_compare_colormaps.ipynb
+See my notebook [Evaluate and compare colormaps](https://github.com/seg/tutorials/blob/master/1408_Evaluate_and_compare_colormaps/How_to_evaluate_and_compare_colormaps.ipynb) for a background on perceptual colormaps, and in particular part 4 for an example of the perceptual test.
 
 I started with a Matlab prototype some time ago to test the ideas of sorting  and test of monotonicity, which seemed to work.
 
 Now I am implementing it in Python for this repository.
 
-I plan to test different ideas, or points in the workflow  in different notebooks, which I will upload as completed.
+I plan to test different ideas, or points in the workflow  in different notebooks, which I will upload as completed, which I will combine once I have all the different pieces done.

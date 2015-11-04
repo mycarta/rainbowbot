@@ -34,4 +34,7 @@ and the result of sorting H and L by H
 The logic for the test, in Matlab, was:
 > test = (all(diff(L)<0)) | (all(diff(L)<0))
 
+which will translate into:
+> all(x<y for x, y in pairwise(L))
+
 Now I am implementing the whole workflow in Python. I plan to test different ideas, or points in the workflow  in different notebooks, which I will upload as completed, which I will combine once I have all the different pieces done

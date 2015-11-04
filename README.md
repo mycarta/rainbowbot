@@ -21,11 +21,15 @@ See my notebook [Evaluate and compare colormaps](https://github.com/seg/tutorial
 
 I started with a quick and dirty Matlab prototype some time ago to test the ideas of sorting  and test of monotonicity, which seemed to work:
 an image of geophysical data with non perceptual colormap 
-![Jet](https://github.com/mycarta/rainbowbot/blob/master/images%20for%20README/rainbow_blues_tight.png)
+
+![Jet](https://github.com/mycarta/rainbowbot/blob/master/images4README/rainbow_blues_tight.png)
+
 one with perceptual colormap (in the sense of ordered, strictly monotonic lightness)
-![LinearL](https://github.com/mycarta/rainbowbot/blob/master/images%20for%20README/LinearL_tight.png)
+
+![LinearL](https://github.com/mycarta/rainbowbot/blob/master/images4README/LinearL_tight.png)
+
 and the result of sorting H and L by H
-![sort](https://github.com/mycarta/rainbowbot/blob/master/images%20for%20README/H_vs_L_sorted_by_H.PNG)
+![sort](https://github.com/mycarta/rainbowbot/blob/master/images4README/H_vs_L_sorted_by_H.PNG)
 
 
 

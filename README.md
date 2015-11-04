@@ -1,6 +1,6 @@
 # rainbowbot
 
-The idea is to build a bot that will: 
+The idea (thanks to Matt Hall of [Agile Geoscience](http://www.agilegeoscience.com/who/)) is to build a bot that will: 
 - download images with maps from the internet (from Google, Twitter, etc.)
 - automatically detect the color maps
 - flag those with rainbow and other non perceptual colormaps

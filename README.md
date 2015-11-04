@@ -31,8 +31,7 @@ one with perceptual colormap (in the sense of ordered, strictly monotonic lightn
 and the result of sorting H and L by H
 ![sort](https://github.com/mycarta/rainbowbot/blob/master/images4README/H_vs_L_sorted_by_H.PNG)
 
+The logic for the test, in Matlab, was:
+> test = (all(diff(L)<0)) | (all(diff(L)<0))
 
-
-Now I am implementing it in Python for this repository
-
-I plan to test different ideas, or points in the workflow  in different notebooks, which I will upload as completed, which I will combine once I have all the different pieces done
+Now I am implementing the whole workflow in Python. I plan to test different ideas, or points in the workflow  in different notebooks, which I will upload as completed, which I will combine once I have all the different pieces done

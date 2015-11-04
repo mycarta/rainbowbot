@@ -29,6 +29,7 @@ one with perceptual colormap (in the sense of ordered, strictly monotonic lightn
 ![LinearL](https://github.com/mycarta/rainbowbot/blob/master/images4README/LinearL_tight.png)
 
 and the result of sorting H and L by H
+
 ![sort](https://github.com/mycarta/rainbowbot/blob/master/images4README/H_vs_L_sorted_by_H.PNG)
 
 The logic for the test, in Matlab, was:

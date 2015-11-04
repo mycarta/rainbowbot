@@ -19,7 +19,15 @@ This is my envisioned workflow (ideally all automatic, no user input required, a
 
 See my notebook [Evaluate and compare colormaps](https://github.com/seg/tutorials/blob/master/1408_Evaluate_and_compare_colormaps/How_to_evaluate_and_compare_colormaps.ipynb) for a background on perceptual colormaps, and in particular part 4 for an example of the perceptual test.
 
-I started with a Matlab prototype some time ago to test the ideas of sorting  and test of monotonicity, which seemed to work.
+I started with a quick and dirty Matlab prototype some time ago to test the ideas of sorting  and test of monotonicity, which seemed to work:
+an image of geophysical data with non perceptual colormap 
+![Jet](https://github.com/mycarta/rainbowbot/blob/master/images%20for%20README/rainbow_blues_tight.png)
+one with perceptual colormap (in the sense of ordered, strictly monotonic lightness)
+![LinearL](https://github.com/mycarta/rainbowbot/blob/master/images%20for%20README/LinearL_tight.png)
+and the result of sorting H and L by H
+![sort](https://github.com/mycarta/rainbowbot/blob/master/images%20for%20README/H_vs_L_sorted_by_H.PNG)
+
+
 
 Now I am implementing it in Python for this repository
 

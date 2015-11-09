@@ -19,7 +19,7 @@ This is my envisioned workflow (ideally all automatic, no user input required, a
 
 See my notebook [Evaluate and compare colormaps](https://github.com/seg/tutorials/blob/master/1408_Evaluate_and_compare_colormaps/How_to_evaluate_and_compare_colormaps.ipynb) for a background on perceptual colormaps, and in particular part 4 for an example of the perceptual test.
 
-I started with a quick and dirty Matlab prototype some time ago to test the ideas of sorting  and test of monotonicity, which seemed to work:
+I started with a quick and dirty Matlab prototype some time ago to try my ideas on sorting and to try the test of monotonicity, which seemed to work:
 an image of geophysical data with non perceptual colormap 
 
 ![Jet](https://github.com/mycarta/rainbowbot/blob/master/images4README/rainbow_blues_tight.png)

@@ -4,7 +4,7 @@ The idea (thanks to Matt Hall of [Agile Geoscience](http://www.agilegeoscience.c
 - download images with maps from the internet (from Google, Twitter, etc.)
 - automatically detect the color maps
 - flag those with rainbow and other non perceptual colormaps
-- optionally convert the colormap to a perceptual version by linearizing the lightness profile
+- optionally convert the colormap to a more perceptual version by linearizing the lightness gradient
 
 This is my envisioned workflow (ideally all automatic, no user input required, and no hard-coded parameters):
 

@@ -31,7 +31,7 @@ def find_map(url, min_int = 0.03, max_int = 0.97, disk_sz = 3):
     img = np.asarray(Image.open(StringIO(rspns.content)))[:,:,:3]
     
     # image must be RGB or RGB(A)
-    if len(img.shape) !> 2
+    if not len(img.shape) > 2:
         raise ValueError('Sorry, image has to be RGB (M, N, 3) or RGBA (M, N, 4)')
 
     # remove alpha channel

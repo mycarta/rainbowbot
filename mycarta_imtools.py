@@ -47,7 +47,10 @@ def find_map(url, min_int = 0.03, max_int = 0.97, disk_sz = 3):
     label_objects, nb_labels = ndi.label(binary)
     sizes = np.bincount(label_objects.ravel())   
     sizes[0] = 0   
-    binary_objects = remove_small_objects(binary, max(sizes)) 
+    if nb_labels <2:
+        binary_objects = binary # in case the image already contained only the map
+    else:
+        binary_objects = remove_small_objects(binary, max(sizes))  
     
     # remove holes from it
     binary_holes = ndi.morphology.binary_fill_holes(binary_objects) 

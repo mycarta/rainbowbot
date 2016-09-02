@@ -20,7 +20,7 @@ This is my envisioned workflow (ideally all automatic, no user input required, a
 8. post a tweet with a warning ('bad colormap', or similar)
 8. as optional functionality: convert colormap to a perceptual version and tweet a copy of the new image 
 
-See my notebook [Evaluate and compare colormaps](https://github.com/seg/tutorials/blob/master/1408_Evaluate_and_compare_colormaps/How_to_evaluate_and_compare_colormaps.ipynb) for a background on perceptual colormaps, and in particular part 4 for an example of the perceptual test.
+See my notebook [Evaluate and compare colormaps](https://github.com/seg/tutorials-2014/blob/master/1408_Evaluate_and_compare_colormaps/How_to_evaluate_and_compare_colormaps.ipynb) for a background on perceptual colormaps, and in particular part 4 for an example of the perceptual test.
 
 I started with a quick and dirty Matlab prototype some time ago to try my ideas on sorting and to try the test of monotonicity, which seemed to work:
 an image of geophysical data with non perceptual colormap 

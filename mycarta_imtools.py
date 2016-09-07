@@ -4,10 +4,10 @@ import requests
 from StringIO import StringIO
 from scipy import ndimage as ndi
 from skimage import color
-from skimage.morphology import disk, opening, remove_small_objects
+from skimage.morphology import disk, opening, remove_small_objects, convex_hull_image
 
 
-def find_map(url, min_int = 0.03, max_int = 0.97, disk_sz = 3):
+def find_map(url, min_int = 0.03, max_int = 0.97, disk_sz = 2, opt = None):
     """Find the map in an image (using morphological operations) and return it.
     Heuristic assumption the map is the largest object in the map.
     Parameters
@@ -19,7 +19,7 @@ def find_map(url, min_int = 0.03, max_int = 0.97, disk_sz = 3):
     max_int : threshold value to eliminate ~white background.
         If max_int is not given, a default value of 0.97 is uded. 
     disk_sz : size of disk-shaped structuring element for opening.
-        If disk_sz is not given, a default value of 3 is uded.
+        If disk_sz is not given, a default value of 2 is uded.
     Returns
     -------
     out : (M, N, 3) array
@@ -55,6 +55,10 @@ def find_map(url, min_int = 0.03, max_int = 0.97, disk_sz = 3):
     # remove holes from it
     binary_holes = ndi.morphology.binary_fill_holes(binary_objects) 
     
+    # optional: get convex hull image (smallest convex polygon that surround all white pixels)
+    if opt is not None:
+        binary_holes = convex_hull_image(binary_holes)
+    
     # use it to make 3D mask
     mask3 = np.zeros(img.shape)
     mask3[:,:,0] = binary_holes
@@ -67,9 +71,10 @@ def find_map(url, min_int = 0.03, max_int = 0.97, disk_sz = 3):
     
     # crop zero columns and zero rows
     # see http://stackoverflow.com/a/31402351/1034648
+    # plus a few columns and rows to counter the initial opening
     non_empty = np.where(final != 0)
     out = final[np.min(non_empty[0]) : np.max(non_empty[0]), 
-                   np.min(non_empty[1]) : np.max(non_empty[1])]
+                   np.min(non_empty[1]) : np.max(non_empty[1])][disk_sz:-disk_sz, disk_sz:-disk_sz]
     
     # output
     return out

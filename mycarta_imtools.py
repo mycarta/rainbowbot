@@ -20,6 +20,8 @@ def find_map(url, min_int = 0.03, max_int = 0.97, disk_sz = 2, opt = None):
         If max_int is not given, a default value of 0.97 is uded. 
     disk_sz : size of disk-shaped structuring element for opening.
         If disk_sz is not given, a default value of 2 is uded.
+    opt			:	optional flag. Default is None; if set to not None, 
+    		the convex hull of the largest detected object is returned.
     Returns
     -------
     out : (M, N, 3) array

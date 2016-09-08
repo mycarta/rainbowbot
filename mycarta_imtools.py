@@ -40,7 +40,7 @@ def find_map(url, min_int = 0.03, max_int = 0.97, disk_sz = 2, opt = None):
     img = img[:,:,:3]
     
     # binary from rgb
-    binary = np.logical_and(color.rgb2gray(img) > 0.03, color.rgb2gray(img) < 0.97)
+    binary = np.logical_and(color.rgb2gray(img) > min_int, color.rgb2gray(img) < max_int)
     
     # apply very mild opening
     binary = opening(binary, disk(disk_sz))

@@ -3,7 +3,7 @@ from PIL import Image
 import requests
 from StringIO import StringIO
 from scipy import ndimage as ndi
-from skimage import color
+from skimage import color,  exposure
 from skimage.morphology import disk, opening, remove_small_objects, convex_hull_image
 
 
@@ -39,8 +39,12 @@ def find_map(url, min_int = 0.03, max_int = 0.97, disk_sz = 2, opt = None):
     # remove alpha channel
     img = img[:,:,:3]
     
+    # stretch contrast
+    p2, p98 = np.percentile(img, (2, 98))
+    rescale = exposure.rescale_intensity(img, in_range=(p2, p98))
+    
     # binary from rgb
-    binary = np.logical_and(color.rgb2gray(img) > min_int, color.rgb2gray(img) < max_int)
+    binary = np.logical_and(color.rgb2gray(rescale) > min_int, color.rgb2gray(rescale) < max_int)
     
     # apply very mild opening
     binary = opening(binary, disk(disk_sz))

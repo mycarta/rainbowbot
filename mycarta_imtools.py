@@ -25,7 +25,7 @@ def find_map(url, min_int = 0.03, max_int = 0.97, disk_sz = 2, opt = None):
     Returns
     -------
     out : (M, N, 3) array
-        An image with only the main map.    
+        An image with only the main map.
     """
 
     # rgb from url

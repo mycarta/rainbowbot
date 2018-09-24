@@ -1,6 +1,6 @@
 # rainbowbot
 
-The idea for this project was inspired by Matt Hall of [Agile Geoscience](http://www.agilegeoscience.com/who/).
+The idea for this project was inspired by Matt Hall of [Agile](http://www.agilegeoscience.com/who/).
 
 The plan is to eventually build a web app that will: 
 - download images with maps from the internet, for example from Twitter
